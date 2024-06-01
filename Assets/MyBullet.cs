@@ -14,7 +14,7 @@ public class MyBullet : MonoBehaviour
             if (collision.gameObject.CompareTag("TankFree_Red"))
             {
                 // Reduce the player's health by the damage amount
-                collision.gameObject.GetComponent<PlayerStats>().PlayerHealth -= damage;
+                collision.gameObject.GetComponent<EnemyTankStats>().PlayerHealth -= damage;
                     
             }
             Destroy(gameObject);
