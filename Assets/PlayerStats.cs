@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float PlayerHealth = 100; // Maximum health of the player
-   
+     public float PlayerHealth = 100; // Maximum health of the player
     public float rotationSpeed = 120f; // Rotation speed of the player (degrees per second)
     public float fireRate = 0.5f; // Rate of fire (bullets per second)
+    public int lives = 3; // Number of lives for the player
 
     [Header("Respawn")]
     public Transform respawnPoint; // Respawn point for the player
@@ -24,12 +24,24 @@ public class PlayerStats : MonoBehaviour
     // Function to respawn the player
     public void RespawnPlayer()
     {
+        // Reduce lives count
+        lives--;
+
+        if (lives <= 0)
+        {
+            // Change scene to "GameOverScene" when lives run out
+            SceneManager.LoadScene("ScenaHamza");
+            return;
+        }
+
         // Move the tank to the respawn point's position
         transform.position = respawnPoint.position;
     
         // Set the tank's rotation to match the respawn point's rotation
         transform.rotation = respawnPoint.rotation;
-        PlayerHealth = 100; // Reset the player's health
+        
+        // Reset the player's health
+        PlayerHealth = 100;
     }
 
     private void Update()
@@ -39,16 +51,16 @@ public class PlayerStats : MonoBehaviour
         {
             RespawnPlayer(); // Respawn the player
         }
+
+        // Check if the player falls below a certain y position
         if (transform.position.y < -10f) // Adjust the y threshold as needed
         {
             RespawnPlayer();
         }
     }
 
-public void ResetHealth()
+    public void ResetHealth()
     {
-        PlayerHealth =100;
-      
+        PlayerHealth = 100;  
     }
-
 }
