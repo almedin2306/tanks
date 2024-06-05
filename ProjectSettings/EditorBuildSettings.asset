@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScenaHamza.unity
     guid: b5ea504336e9d71418ed50d6daecb394
+  - enabled: 1
+    path: Assets/Scenes/Garage.unity
+    guid: 651104fd3f31473419408f0fe5495c8b
   m_configObjects: {}

@@ -30,7 +30,7 @@ public class PlayerStats : MonoBehaviour
         if (lives <= 0)
         {
             // Change scene to "GameOverScene" when lives run out
-            SceneManager.LoadScene("ScenaHamza");
+            SceneManager.LoadScene("Garage");
             return;
         }
 
