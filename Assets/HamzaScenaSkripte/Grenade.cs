@@ -7,6 +7,7 @@ public class Grenade : MonoBehaviour
     public GameObject hitEffectPrefab; // Prefab efekta koji će se prikazati na mjestu pogotka
     public float explosionRadius = 5f; // Radijus eksplozije
 
+    public float damageAmount = 20; // Amount of damage the bullet deals
     private bool hasExploded = false;
 
     void OnCollisionEnter(Collision collision)
@@ -15,6 +16,22 @@ public class Grenade : MonoBehaviour
         {
             Explode();
             hasExploded = true;
+        }
+        float damage = PowerUpManager.Instance.GetCurrentBulletDamage();
+        if (!collision.gameObject.CompareTag("TankFree_Blue"))
+        {
+            if (collision.gameObject.CompareTag("TankFree_Red"))
+            {
+                // Reduce the player's health by the damage amount
+                collision.gameObject.GetComponent<EnemyTankStats>().PlayerHealth -= damage;
+                    
+            }
+        }
+            
+        if (collision.gameObject.CompareTag("Destroyable"))
+        {
+            Destroy(collision.gameObject);
+            
         }
     }
 

@@ -17,13 +17,13 @@ private void Awake()
 
  private void OnTriggerEnter(Collider other)
 {
- TankMovement tank = other.gameObject.GetComponent<TankMovement>();
+ TankMovementv2 tank = other.gameObject.GetComponent<TankMovementv2>();
 	if(tank!=null)
 		{
 			StartCoroutine(PowerUp(tank));	
 		}
 }
-public IEnumerator PowerUp(TankMovement tank)
+public IEnumerator PowerUp(TankMovementv2 tank)
 	{
 		_collider.enabled=false;
 		art.SetActive(false);
@@ -33,12 +33,12 @@ public IEnumerator PowerUp(TankMovement tank)
 		Destroy(gameObject);	
 	}
 
-public void ActPower(TankMovement tank)
+public void ActPower(TankMovementv2 tank)
 	{
 		tank.SpeedBoost();
 	}
 
-public void DeactPower(TankMovement tank)
+public void DeactPower(TankMovementv2 tank)
  	{	
 		tank.ResetSpeed();
 	}

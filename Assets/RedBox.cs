@@ -17,14 +17,14 @@ public class RedBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        TankMovement tank = other.gameObject.GetComponent<TankMovement>();
+        TankMovementv2 tank = other.gameObject.GetComponent<TankMovementv2>();
         if (tank != null)
         {
             StartCoroutine(PowerUp(tank));
         }
     }
 
-    public IEnumerator PowerUp(TankMovement tank)
+    public IEnumerator PowerUp(TankMovementv2 tank)
     {
         _collider.enabled = false;
         art.SetActive(false);
@@ -34,13 +34,13 @@ public class RedBox : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void ActPower(TankMovement tank)
+    public void ActPower(TankMovementv2 tank)
     {
         // Apply damage increase to bullets
         PowerUpManager.Instance.ModifyBulletDamage(damageIncrease);
     }
 
-    public void DeactPower(TankMovement tank)
+    public void DeactPower(TankMovementv2 tank)
     {
         // Reset bullet damage to default
         PowerUpManager.Instance.ResetBulletDamage();

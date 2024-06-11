@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 5
-  damageIncrease: 50
+  damageIncrease: 20
   art: {fileID: 5281227724977784501}
   _collider: {fileID: 0}
 --- !u!1 &5281227724977784501

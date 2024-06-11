@@ -6,6 +6,7 @@ using UnityEngine;
 public class TankMovementv2 : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
+    public float OriginalSpeed = 5.0f;
     public float rotationSpeed = 120.0f;
     public GameObject[] leftWheels;
     public GameObject[] rightWheels;
@@ -35,6 +36,15 @@ public class TankMovementv2 : MonoBehaviour
         RotateTank(rotationInput);
     }
 
+    public void SpeedBoost()
+    {
+        moveSpeed *= 1.5f; // Increase speed by 50%
+    }
+
+    public void ResetSpeed()
+    {
+        moveSpeed=OriginalSpeed;
+    }
     void MoveTankObj(float input)
     {
 
