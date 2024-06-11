@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyTankStats : MonoBehaviour
@@ -35,6 +36,7 @@ public class EnemyTankStats : MonoBehaviour
         // Check if the player's health is 0 or below
         if (PlayerHealth <= 0 ) // Adjust the y threshold as needed
         {
+            
             Destroy(gameObject);
            
                 spawn.EnemyDestroyed(); // Call the EnemyDestroyed function in the SpawnManager
