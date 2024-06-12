@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6728535193378062836}
   - component: {fileID: 7378658291166590478}
   - component: {fileID: 7077686352674082735}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Wheel_f_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2820414709048842420}
   - component: {fileID: 4732956974864323867}
   - component: {fileID: 5862888574110464447}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 2209783588514482990}
   - component: {fileID: 2098482218756998034}
   - component: {fileID: 8921189856230139652}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Wheel_b_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 6660104985847096281}
   - component: {fileID: 4272971674931469466}
   - component: {fileID: -7613448329203299417}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Red
   m_TagString: TankFree_Red
   m_Icon: {fileID: 0}
@@ -493,6 +493,7 @@ MonoBehaviour:
   PlayerHealth: 100
   rotationSpeed: 120
   fireRate: 0.5
+  lives: 3
   respawnPoint: {fileID: 0}
   shootSound: {fileID: 0}
   muzzleFlash: {fileID: 0}
@@ -512,7 +513,8 @@ MonoBehaviour:
   respawnPoint: {fileID: 0}
   shootSound: {fileID: 0}
   muzzleFlash: {fileID: 0}
-  spawnManager: {fileID: 0}
+  spawn: {fileID: 0}
+  coinManager: {fileID: 0}
 --- !u!1 &5107651329851753158
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +526,7 @@ GameObject:
   - component: {fileID: 1563113999593920328}
   - component: {fileID: 8621607298628976040}
   - component: {fileID: 3765147019350768276}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Wheel_f_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +609,7 @@ GameObject:
   - component: {fileID: 7578721821650205348}
   - component: {fileID: 440304952687072775}
   - component: {fileID: 636326789471831923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5723475384824661978}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bulletspawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +725,7 @@ GameObject:
   - component: {fileID: 8318209742668917331}
   - component: {fileID: 6465618905082013936}
   - component: {fileID: 4092043326705337601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TankFree_Wheel_b_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -19,6 +19,9 @@ public class EnemyTankStats : MonoBehaviour
 
     public EnemySpawner spawn; // Reference to the SpawnManager script
 
+    public CoinManager coinManager;
+    public CoinUI coinUI;
+
     // Other properties, methods, and events related to player stats can be added here
 
     // Function to respawn the playerpublic void RespawnPlayer()
@@ -30,15 +33,39 @@ public class EnemyTankStats : MonoBehaviour
         {
             Debug.LogWarning("EnemySpawner reference not found!");
         }
+
+        coinManager = FindObjectOfType<CoinManager>();
+        if (coinManager == null)
+        {
+            Debug.LogError("CoinManager not found in the scene!");
+        }
+
+        coinUI = FindObjectOfType<CoinUI>();
+
     }
     private void Update()
     {
         // Check if the player's health is 0 or below
         if (PlayerHealth <= 0 ) // Adjust the y threshold as needed
         {
+
+            if (gameObject.layer == 6)
+            {
+                coinManager.AddCoins(5);
+            }
+            else if (gameObject.layer == 9)
+            {
+                coinManager.AddCoins(10);
+            }
+            else
+            {
+                coinManager.AddCoins(15);
+            }
+            
+            coinUI.showAmountOfCoins();
             
             Destroy(gameObject);
-           
+                
                 spawn.EnemyDestroyed(); // Call the EnemyDestroyed function in the SpawnManager
             
              // Respawn the player

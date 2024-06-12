@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6286699550776491790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GreenBulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 1149560640927516694}
   - component: {fileID: 2055362573144362708}
   - component: {fileID: 21611883000522382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankFree_Green
   m_TagString: TankFree_Red
   m_Icon: {fileID: 0}
@@ -275,6 +275,7 @@ MonoBehaviour:
   PlayerHealth: 40
   rotationSpeed: 120
   fireRate: 0.5
+  lives: 3
   respawnPoint: {fileID: 0}
   shootSound: {fileID: 0}
   muzzleFlash: {fileID: 0}
@@ -295,6 +296,7 @@ MonoBehaviour:
   shootSound: {fileID: 0}
   muzzleFlash: {fileID: 0}
   spawn: {fileID: 0}
+  coinManager: {fileID: 0}
 --- !u!1 &5120171634852160315
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +308,7 @@ GameObject:
   - component: {fileID: 3636980712135736626}
   - component: {fileID: 1942874130670959844}
   - component: {fileID: 1929751536446624011}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankFree_Wheel_b_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +391,7 @@ GameObject:
   - component: {fileID: 7095464290091043819}
   - component: {fileID: 6534183261114301418}
   - component: {fileID: 6009908052735272412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankFree_Wheel_f_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +474,7 @@ GameObject:
   - component: {fileID: 6919933511974605405}
   - component: {fileID: 1831258714168939065}
   - component: {fileID: 4150890840236053486}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankFree_Wheel_b_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +557,7 @@ GameObject:
   - component: {fileID: 6337595319868388391}
   - component: {fileID: 7234793201938978587}
   - component: {fileID: 2488293876527969698}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankFree_Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -638,7 +640,7 @@ GameObject:
   - component: {fileID: 2557916711115202727}
   - component: {fileID: 283697478219902570}
   - component: {fileID: 3136081336448061203}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankFree_Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,7 +725,7 @@ GameObject:
   - component: {fileID: 4610126761686489376}
   - component: {fileID: 186773178663821818}
   - component: {fileID: 822791216210345300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TankFree_Wheel_f_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
