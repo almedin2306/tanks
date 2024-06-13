@@ -5743,15 +5743,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1284648794004371561, guid: c7c8b92964c2d28478f2671a00d6a5d7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.22900361
+      value: 0.22900362
       objectReference: {fileID: 0}
     - target: {fileID: 1284648794004371561, guid: c7c8b92964c2d28478f2671a00d6a5d7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000018726096
+      value: -0.000000018726096
       objectReference: {fileID: 0}
     - target: {fileID: 1284648794004371561, guid: c7c8b92964c2d28478f2671a00d6a5d7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000044054147
+      value: 0.0000000044054156
       objectReference: {fileID: 0}
     - target: {fileID: 1922015956748924814, guid: c7c8b92964c2d28478f2671a00d6a5d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5963,7 +5963,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22900361, y: 0.000000018726096, z: -0.0000000044054147, w: 0.97342557}
+  m_LocalRotation: {x: 0.22900362, y: -0.000000018726096, z: 0.0000000044054156, w: 0.97342557}
   m_LocalPosition: {x: 14.03, y: 3.918512, z: -0.8022876}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7131,6 +7131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c70eff2af151084daa77cfe77033f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasCoin: {fileID: 1152648464}
   coinManager: {fileID: 0}
 --- !u!114 &1152648467
 MonoBehaviour:

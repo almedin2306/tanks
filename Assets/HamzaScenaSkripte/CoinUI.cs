@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class CoinUI : MonoBehaviour
 {
+    public GameObject canvasCoin;
     private TextMeshProUGUI coinAmount;
     public CoinManager coinManager;
     void Start()
     {
         coinManager = FindObjectOfType<CoinManager>();
-        coinAmount = FindObjectOfType<TextMeshProUGUI>();
+        coinAmount = canvasCoin.GetComponent<TextMeshProUGUI>();
     }
 
     public void showAmountOfCoins()
