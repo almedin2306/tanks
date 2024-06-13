@@ -19,6 +19,8 @@ public class EnemyTankStats : MonoBehaviour
 
     public EnemySpawner spawn; // Reference to the SpawnManager script
 
+	public GameObject explosionEffect;
+
     public CoinManager coinManager;
     public CoinUI coinUI;
 
@@ -64,13 +66,25 @@ public class EnemyTankStats : MonoBehaviour
             
             coinUI.showAmountOfCoins();
             
-            Destroy(gameObject);
-                
-                spawn.EnemyDestroyed(); // Call the EnemyDestroyed function in the SpawnManager
+            spawn.EnemyDestroyed(); // Call the EnemyDestroyed function in the SpawnManager
+            Destroy(gameObject); // Destroy the enemy object
+           // StartCoroutine(DestroyAfterDelay(0.2f));
             
-             // Respawn the player
+            
         }
     }
+
+	//private IEnumerator DestroyAfterDelay(float delay)
+    /// if (explosionEffect != null)
+       // {
+         //   Instantiate(explosionEffect, transform.position, transform.rotation);
+        //}
+
+       // yield return new WaitForSeconds(delay); // Wait for the specified delay
+
+       // spawn.EnemyDestroyed(); // Call the EnemyDestroyed function in the SpawnManager
+       // Destroy(gameObject); // Destroy the enemy object
+   // }
     
     // Call this function when an enemy is destroyed
    
