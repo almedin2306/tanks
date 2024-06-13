@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-     public float PlayerHealth = 100; // Maximum health of the player
+    public float PlayerHealth = 100; // Maximum health of the player
     public float rotationSpeed = 120f; // Rotation speed of the player (degrees per second)
     public float fireRate = 0.5f; // Rate of fire (bullets per second)
     public int lives = 3; // Number of lives for the player
 
+    public CoinManager coinManager;
+    
     [Header("Respawn")]
     public Transform respawnPoint; // Respawn point for the player
 
@@ -21,6 +24,11 @@ public class PlayerStats : MonoBehaviour
 
     // Other properties, methods, and events related to player stats can be added here
 
+    public void Start()
+    {
+        coinManager=FindObjectOfType<CoinManager>();
+    }
+
     // Function to respawn the player
     public void RespawnPlayer()
     {
@@ -30,6 +38,7 @@ public class PlayerStats : MonoBehaviour
         if (lives <= 0)
         {
             // Change scene to "GameOverScene" when lives run out
+            PlayerPrefs.SetInt("CoinAmount", PlayerPrefs.GetInt("CoinAmount")+coinManager.GetTotalCoins());
             SceneManager.LoadScene("Garage");
             return;
         }
