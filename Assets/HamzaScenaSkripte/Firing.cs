@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,16 @@ public class Firing : MonoBehaviour
 {
     public float launchSpeed = 75.0f;
     public GameObject objectPrefab;
-    public float cooldownDuration = 2.0f; // Vrijeme u sekundama između ispaljivanja
+    public float cooldownDuration; // Vrijeme u sekundama između ispaljivanja
     private bool canFire = true; // Da li je trenutno moguće ispaljivanje
 
     // Update is called once per frame
+
+    private void Start()
+    {
+        cooldownDuration = PlayerPrefs.GetFloat("ReloadSpeedValue");
+    }
+
     void Update()
     {
         if (canFire && Input.GetKeyDown("space"))

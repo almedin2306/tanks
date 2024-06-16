@@ -1,10 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TuretRotation : MonoBehaviour
 {
-    public float rotationSpeed = 90.0f;
+    public float rotationSpeed;
+
+    private void Start()
+    {
+        rotationSpeed = PlayerPrefs.GetFloat("TurretRotationSpeedValue");
+    }
 
     // Update is called once per frame
     void Update()

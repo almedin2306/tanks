@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float PlayerHealth = 100; // Maximum health of the player
+    public float PlayerHealth; // Maximum health of the player
     public float rotationSpeed = 120f; // Rotation speed of the player (degrees per second)
     public float fireRate = 0.5f; // Rate of fire (bullets per second)
     public int lives = 3; // Number of lives for the player
@@ -27,6 +27,7 @@ public class PlayerStats : MonoBehaviour
     public void Start()
     {
         coinManager=FindObjectOfType<CoinManager>();
+        PlayerHealth = PlayerPrefs.GetFloat("HealthValue");
     }
 
     // Function to respawn the player

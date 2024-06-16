@@ -267,7 +267,6 @@ GameObject:
   - component: {fileID: 3821393998282906332}
   - component: {fileID: 6830172771555635800}
   - component: {fileID: 6660104985847096281}
-  - component: {fileID: 4272971674931469466}
   - component: {fileID: -7613448329203299417}
   m_Layer: 7
   m_Name: TankFree_Red
@@ -478,25 +477,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4272971674931469466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781285989655442016}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8203523a65a2f574c8544d76e0aaea2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerHealth: 100
-  rotationSpeed: 120
-  fireRate: 0.5
-  lives: 3
-  respawnPoint: {fileID: 0}
-  shootSound: {fileID: 0}
-  muzzleFlash: {fileID: 0}
 --- !u!114 &-7613448329203299417
 MonoBehaviour:
   m_ObjectHideFlags: 0

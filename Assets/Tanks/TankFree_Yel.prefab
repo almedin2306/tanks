@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 7883508747758128213}
   - component: {fileID: 6005749480198238271}
   - component: {fileID: 5389963056680484799}
-  - component: {fileID: 6273453577222187036}
   - component: {fileID: 8947560279007477847}
   - component: {fileID: 5567027009155233709}
   - component: {fileID: -7807063038727344517}
@@ -283,25 +282,6 @@ MonoBehaviour:
   - {fileID: 1632459827845192300}
   - {fileID: 6515056426888431649}
   rotationSpeed: 100
---- !u!114 &6273453577222187036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2513045743786402239}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8203523a65a2f574c8544d76e0aaea2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerHealth: 20
-  rotationSpeed: 120
-  fireRate: 0.5
-  lives: 3
-  respawnPoint: {fileID: 0}
-  shootSound: {fileID: 0}
-  muzzleFlash: {fileID: 0}
 --- !u!114 &8947560279007477847
 MonoBehaviour:
   m_ObjectHideFlags: 0

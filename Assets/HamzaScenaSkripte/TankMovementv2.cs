@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class TankMovementv2 : MonoBehaviour
 {
-    public float moveSpeed = 5.0f;
-    public float OriginalSpeed = 5.0f;
-    public float rotationSpeed = 120.0f;
+    public float moveSpeed;
+    public float OriginalSpeed = 3.0f;
+    public float rotationSpeed;
     public GameObject[] leftWheels;
     public GameObject[] rightWheels;
 
-    public float wheelRotationSpeed = 200.0f;
+    public float wheelRotationSpeed = 150.0f;
 
     private Rigidbody rb;
     private float moveInput;
@@ -20,6 +20,8 @@ public class TankMovementv2 : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        moveSpeed = PlayerPrefs.GetFloat("EngineLevelValue");
+        rotationSpeed = PlayerPrefs.GetFloat("RotationSpeedValue");
     }
 
     void Update()
