@@ -10,6 +10,9 @@ TagManager:
   - DestroyableSmall
   - Ground
   - EnemyBullet
+  - NotificationForm
+  - NotificationFormBackground
+  - NotificationFormText
   layers:
   - Default
   - TransparentFX
