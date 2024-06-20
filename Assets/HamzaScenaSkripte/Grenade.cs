@@ -9,9 +9,18 @@ public class Grenade : MonoBehaviour
 
     public float damageAmount = 20; // Amount of damage the bullet deals
     private bool hasExploded = false;
+    public AudioClip shotAudioClip;
 
+   
     void OnCollisionEnter(Collision collision)
     {
+        AudioSource.PlayClipAtPoint(shotAudioClip, transform.position);
+
+        if (!hasExploded)
+        {
+            Explode();
+            hasExploded = true;
+        }
         if (!hasExploded)
         {
             Explode();

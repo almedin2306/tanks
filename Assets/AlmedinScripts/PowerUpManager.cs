@@ -8,7 +8,9 @@ public class PowerUpManager : MonoBehaviour
     public static PowerUpManager Instance; // Singleton instance
 
     private float currentPlayerBulletDamage = 20f;
-    private float currentEnemyBulletDamage = 20f;
+    public float currentEnemyBulletDamage=20f;
+    
+    
 
     private void Awake()
     {
@@ -44,7 +46,7 @@ public class PowerUpManager : MonoBehaviour
     }
 	public void ResetEnemyBulletDamage()
     {
-        currentEnemyBulletDamage = 20f; // Reset bullet damage to default
+        currentEnemyBulletDamage = 20;
     }
 	public float GetCurrentEnemyBulletDamage()
     {

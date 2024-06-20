@@ -5,7 +5,7 @@ using UnityEngine;
 public class BrownBox : MonoBehaviour
 { public float duration = 5f;
     public float damageIncrease = -10f; // Amount of damage increase
-
+    public bool smth=false;
     public GameObject art = null;
     public Collider _collider;
 
@@ -28,8 +28,10 @@ public class BrownBox : MonoBehaviour
         _collider.enabled = false;
         art.SetActive(false);
         ActPower(tank);
+        smth = true;
         yield return new WaitForSeconds(duration);
         DeactPower(tank);
+        smth = false;
         Destroy(gameObject);
     }
 

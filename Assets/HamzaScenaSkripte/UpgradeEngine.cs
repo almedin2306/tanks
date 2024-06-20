@@ -26,9 +26,9 @@ public class UpgradeEngine : MonoBehaviour
 
     void Start()
     {
-       
         currentUpgradeIndex = PlayerPrefs.GetInt("EngineLevelIndex");
         coinAmount = PlayerPrefs.GetInt("CoinAmount");
+        
         
         
     }

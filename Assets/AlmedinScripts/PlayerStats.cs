@@ -51,7 +51,7 @@ public class PlayerStats : MonoBehaviour
         transform.rotation = respawnPoint.rotation;
         
         // Reset the player's health
-        PlayerHealth = 100;
+        PlayerHealth = PlayerPrefs.GetFloat("HealthValue");
     }
 
     private void Update()
@@ -71,6 +71,6 @@ public class PlayerStats : MonoBehaviour
 
     public void ResetHealth()
     {
-        PlayerHealth = 100;  
+        PlayerHealth = PlayerPrefs.GetFloat("HealthValue");
     }
 }

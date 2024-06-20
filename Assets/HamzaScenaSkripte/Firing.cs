@@ -9,6 +9,9 @@ public class Firing : MonoBehaviour
     public GameObject objectPrefab;
     public float cooldownDuration; // Vrijeme u sekundama između ispaljivanja
     private bool canFire = true; // Da li je trenutno moguće ispaljivanje
+    
+    public GameObject EffectPrefab;
+    public AudioClip shotAudioClip;
 
     // Update is called once per frame
 
@@ -38,6 +41,20 @@ public class Firing : MonoBehaviour
             GameObject newObject = Instantiate(objectPrefab, spawnPosition, transform.rotation);
             Rigidbody rb = newObject.GetComponent<Rigidbody>();
             rb.velocity = velocity;
+            // Offset position for the effect
+            Vector3 effectSpawnPosition = spawnPosition + localXDirection * 1.0f; // Adjust 1.0f as needed
+        
+            // Calculate rotation for the effect (rotated 90 degrees around y-axis)
+            Quaternion effectRotation = Quaternion.Euler(0f, 90f, 0f) * newObject.transform.rotation;
+        
+            // Instanciranje efekta s pomaknutom pozicijom i rotacijom
+            GameObject effect = Instantiate(EffectPrefab, effectSpawnPosition, effectRotation);
+        
+            // Dajte efektu brzinu prema lokalnoj X smjeru (forward smjer)
+            Rigidbody effectRB = effect.GetComponent<Rigidbody>();
+            effectRB.velocity = localXDirection * launchSpeed * 0.1f; // Adjust 0.1f for the desired speed
+            
+            AudioSource.PlayClipAtPoint(shotAudioClip, transform.position);
 
             StartCoroutine(StartCooldown());
             StartCoroutine(DestroyObjectAfterDelay(newObject, 3.0f));

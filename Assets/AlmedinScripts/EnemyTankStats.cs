@@ -50,7 +50,9 @@ public class EnemyTankStats : MonoBehaviour
         // Check if the player's health is 0 or below
         if (PlayerHealth <= 0 ) // Adjust the y threshold as needed
         {
-
+ 
+            Instantiate(explosionEffect, transform.position, transform.rotation);
+            
             if (gameObject.layer == 6)
             {
                 coinManager.AddCoins(5);

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4894929466109029450}
   - component: {fileID: 4361715802408744318}
   - component: {fileID: -4275901531884386814}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemyrocketred
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
@@ -146,4 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7de76b3ed7ae8a4da1a316424a2af16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 20
+  damageAmount: 40
+  shotAudioClip: {fileID: 8300000, guid: 07d86f38d24ec394398898718fd5e4fb, type: 3}
+  hitEffectPrefab: {fileID: 8134847747391794270, guid: 62e88f21ebae868419f4e242bca44437, type: 3}

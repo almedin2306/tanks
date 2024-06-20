@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float damageAmount = 20; // Amount of damage the bullet deals
+    public float damageAmount; // Amount of damage the bullet deals
+    public AudioClip shotAudioClip; 
+    
+    public GameObject hitEffectPrefab;
 
+    
+  
     private void OnCollisionEnter(Collision collision)
     {
+        AudioSource.PlayClipAtPoint(shotAudioClip, transform.position);
+        Instantiate(hitEffectPrefab, transform.position, Quaternion.identity);
         float damage = PowerUpManager.Instance.GetCurrentEnemyBulletDamage();
         if (!collision.gameObject.CompareTag("TankFree_Red"))
         {
             if (collision.gameObject.CompareTag("TankFree_Blue"))
             {
+
                 // Reduce the player's health by the damage amount
-                collision.gameObject.GetComponent<PlayerStats>().PlayerHealth -= damage;
+                collision.gameObject.GetComponent<PlayerStats>().PlayerHealth -= damageAmount;
 
             }
 

@@ -13,6 +13,7 @@ public class firing : MonoBehaviour
     private float lastShotTime; // Time when the last shot was fired
     public float bulletDestroyDelay = 10f; // Delay before bullets are destroyed
 
+    public AudioClip shotAudioClip;
     void Start()
     {
         // Find the player tank GameObject with the "Player" tag
@@ -65,6 +66,7 @@ public class firing : MonoBehaviour
 
     void Shoot()
     {
+        AudioSource.PlayClipAtPoint(shotAudioClip, transform.position);
         // Instantiate a bullet at the fire point's position and rotation
         GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 

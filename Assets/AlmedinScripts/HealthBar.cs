@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour
         // Update the health bar fill amount based on the tank's current health
         if (playerStats != null && healthBarImage != null)
         {
-            float fillAmount = playerStats.PlayerHealth / 100f; // Assuming PlayerHealth ranges from 0 to 100
+            float fillAmount = playerStats.PlayerHealth / PlayerPrefs.GetFloat("HealthValue"); // Assuming PlayerHealth ranges from 0 to 100
             healthBarImage.fillAmount = fillAmount;
             
         }

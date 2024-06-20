@@ -200,10 +200,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.2931726
-  m_Speed: 5
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 360
+  m_AngularSpeed: 300
   m_StoppingDistance: 12
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -258,8 +258,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 9014908611014938528, guid: e3e2c87bd06ad8f47b0b24e6451ebac6, type: 3}
   firePoint: {fileID: 6286699550776491790}
   shootingDistance: 12
-  shootingCooldown: 5
+  shootingCooldown: 2.5
   bulletDestroyDelay: 10
+  shotAudioClip: {fileID: 8300000, guid: 40e71b0f7bd610849b40f150553f4702, type: 3}
 --- !u!114 &2055362573144362708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +277,7 @@ MonoBehaviour:
   rotationSpeed: 120
   fireRate: 0.5
   lives: 3
+  coinManager: {fileID: 0}
   respawnPoint: {fileID: 0}
   shootSound: {fileID: 0}
   muzzleFlash: {fileID: 0}
@@ -291,12 +293,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86bc9d02a9bdbda4d991bf919d780319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHealth: 20
+  PlayerHealth: 40
   respawnPoint: {fileID: 0}
   shootSound: {fileID: 0}
   muzzleFlash: {fileID: 0}
   spawn: {fileID: 0}
-  explosionEffect: {fileID: 6367742693214585668, guid: 30bc91bf406aad64c87ebb984134da03, type: 3}
+  explosionEffect: {fileID: 1764654978243476, guid: a98b15aa948478849b54661e4d9a317e, type: 3}
   coinManager: {fileID: 0}
   coinUI: {fileID: 0}
 --- !u!1 &5120171634852160315
