@@ -16,14 +16,14 @@ public class BrownBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        TankMovementv2 tank = other.gameObject.GetComponent<TankMovementv2>();
+        PlayerStats tank = other.gameObject.GetComponent<PlayerStats>();
         if (tank != null)
         {
             StartCoroutine(PowerUp(tank));
         }
     }
 
-    public IEnumerator PowerUp(TankMovementv2 tank)
+    public IEnumerator PowerUp(PlayerStats tank)
     {
         _collider.enabled = false;
         art.SetActive(false);
@@ -35,15 +35,16 @@ public class BrownBox : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void ActPower(TankMovementv2 tank)
+    public void ActPower(PlayerStats tank)
     {
         // Apply damage increase to bullets
-        PowerUpManager.Instance.ModifyEnemyBulletDamage(damageIncrease);
+        tank.PlayerHealth = tank.PlayerHealth * 2;
     }
 
-    public void DeactPower(TankMovementv2 tank)
+    public void DeactPower(PlayerStats tank)
     {
         // Reset bullet damage to default
-        PowerUpManager.Instance.ResetEnemyBulletDamage();
+        tank.PlayerHealth = tank.PlayerHealth / 2;
+
     }
 }

@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 801, y: -91.31}
-  m_SizeDelta: {x: 253.2, y: 53.1}
+  m_AnchoredPosition: {x: 780, y: 4}
+  m_SizeDelta: {x: 260, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &43649242
 MonoBehaviour:
@@ -367,6 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df07796ec47fde4898f7996000ba022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lD: {fileID: 292458979}
   myNotificationWindow: {fileID: 2012349456}
 --- !u!4 &64742052
 Transform:
@@ -578,7 +579,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1053,8 +1054,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 801, y: -23.38}
-  m_SizeDelta: {x: 253.2, y: 53.1}
+  m_AnchoredPosition: {x: 768, y: 22}
+  m_SizeDelta: {x: 260, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &310328688
 MonoBehaviour:
@@ -1485,7 +1486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340, y: 20.3}
+  m_AnchoredPosition: {x: -350, y: 71}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &459341829
@@ -1508,7 +1509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Turret rotation speed:'
+  m_text: "Turret rotation speed:\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1541,7 +1542,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1842,7 +1843,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340, y: -68.98}
+  m_AnchoredPosition: {x: -360, y: -45}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &607474379
@@ -1865,7 +1866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Reload speed:'
+  m_text: "Reload speed:\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1898,7 +1899,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2211,6 +2212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4073f846081a44fa8b26b216a1bbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lD: {fileID: 292458979}
   myNotificationWindow: {fileID: 2012349456}
 --- !u!1 &925405536
 GameObject:
@@ -2285,7 +2287,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2630,7 +2632,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2690,7 +2692,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 185.15, y: -5.6}
+  m_AnchoredPosition: {x: 130, y: -5.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1065216338
@@ -3133,7 +3135,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3166,7 +3168,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3266,7 +3268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340, y: 54.33}
+  m_AnchoredPosition: {x: -343, y: 149}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1323537407
@@ -3322,7 +3324,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4569,7 +4571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340, y: -40.39}
+  m_AnchoredPosition: {x: -353, y: -2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1671455475
@@ -4592,7 +4594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Health:'
+  m_text: "Health:\t\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4625,7 +4627,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4812,7 +4814,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Engine:'
+  m_text: "Engine:\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4845,7 +4847,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4908,7 +4910,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340, y: 85}
+  m_AnchoredPosition: {x: -340, y: 202}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1742209664
@@ -5261,7 +5263,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -5465,8 +5467,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 801, y: -41.77}
-  m_SizeDelta: {x: 253.2, y: 53.1}
+  m_AnchoredPosition: {x: 771, y: 23}
+  m_SizeDelta: {x: 260, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1840435675
 MonoBehaviour:
@@ -5598,8 +5600,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 801, y: 27.6}
-  m_SizeDelta: {x: 253.2, y: 53.1}
+  m_AnchoredPosition: {x: 762, y: 16}
+  m_SizeDelta: {x: 260, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922118771
 MonoBehaviour:
@@ -5825,6 +5827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01de387532fbf44fae5ac010ad268a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lD: {fileID: 292458979}
   myNotificationWindow: {fileID: 2012349456}
 --- !u!1 &1950961036
 GameObject:
@@ -5874,6 +5877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3d05bf351ac21488fcc84ae1929ed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lD: {fileID: 292458979}
   myNotificationWindow: {fileID: 2012349456}
 --- !u!1 &1966588033
 GameObject:
@@ -5923,6 +5927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8fdef2adca42341b061c77903f6ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lD: {fileID: 292458979}
   myNotificationWindow: {fileID: 2012349456}
 --- !u!1 &2001463415
 GameObject:
@@ -6063,8 +6068,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 801, y: 75}
-  m_SizeDelta: {x: 253.2, y: 53.1}
+  m_AnchoredPosition: {x: 759, y: 29}
+  m_SizeDelta: {x: 260, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2015548891
 MonoBehaviour:
@@ -6377,6 +6382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e1dcb8f21219e44b292bc0a719ef50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSceneName: Garage
 --- !u!82 &2081291097
 AudioSource:
   m_ObjectHideFlags: 0

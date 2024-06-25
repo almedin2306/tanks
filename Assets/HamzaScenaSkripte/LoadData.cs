@@ -16,14 +16,19 @@ public class LoadData : MonoBehaviour
     
     void Start()
     {
-        
+        PlayerPrefs.SetInt("RotationSpeedIndex", 1);
+        PlayerPrefs.SetInt("EngineLevelIndex", 1);
+        PlayerPrefs.SetInt("TurretRotationSpeedIndex", 1);
+        PlayerPrefs.SetInt("HealthIndex", 0);
+        PlayerPrefs.SetInt("ReloadSpeedIndex", 1);
+        PlayerPrefs.SetInt("CoinAmount", 2000);
         LoadCoinAmount();
         LoadEngineLevel();
         LoadRotationSpeed();
         LoadTurretRotationSpeed();
         LoadHealth();
         LoadReloadSpeed();
-        
+       
         
         /*
         LoadFloatValues("EngineLevelIndex", "EngineLevelValue", engineLevelText, 3.0f, 6.0f, 9.0f);
@@ -51,17 +56,17 @@ public class LoadData : MonoBehaviour
         switch (PlayerPrefs.GetInt(upgradeIndex))
         {
             case 1 :
-                textBox.GetComponent<TextMeshProUGUI>().text = "Level 1";
+                textBox.GetComponent<TextMeshProUGUI>().text = "    Level 1";
                 PlayerPrefs.SetFloat(upgradeNameValue,v1);
                 break;
             
             case 2 :
-                textBox.GetComponent<TextMeshProUGUI>().text = "Level 2";
+                textBox.GetComponent<TextMeshProUGUI>().text = "    Level 2";
                 PlayerPrefs.SetFloat(upgradeNameValue,v2);
                 break;
             
             case 3 :
-                textBox.GetComponent<TextMeshProUGUI>().text = "Level 3";
+                textBox.GetComponent<TextMeshProUGUI>().text = "    Level 3";
                 PlayerPrefs.SetFloat(upgradeNameValue,v3);
                 break;
         }
@@ -90,17 +95,17 @@ public class LoadData : MonoBehaviour
         switch (PlayerPrefs.GetInt("EngineLevelIndex"))
         {
             case 1 :
-                engineLevelText.GetComponent<TextMeshProUGUI>().text = "Level 1";
+                engineLevelText.GetComponent<TextMeshProUGUI>().text = "    Level 1";
                 PlayerPrefs.SetFloat("EngineLevelValue",3.0f);
                 break;
             
             case 2 :
-                engineLevelText.GetComponent<TextMeshProUGUI>().text = "Level 2";
+                engineLevelText.GetComponent<TextMeshProUGUI>().text = "    Level 2";
                 PlayerPrefs.SetFloat("EngineLevelValue",6.0f);
                 break;
             
             case 3 :
-                engineLevelText.GetComponent<TextMeshProUGUI>().text = "Level 3";
+                engineLevelText.GetComponent<TextMeshProUGUI>().text = "    Level 3";
                 PlayerPrefs.SetFloat("EngineLevelValue",9.0f);
                 break;
         }
@@ -142,17 +147,17 @@ public class LoadData : MonoBehaviour
         switch (PlayerPrefs.GetInt("TurretRotationSpeedIndex"))
         {
             case 1 :
-                turretRotationSpeedText.GetComponent<TextMeshProUGUI>().text = "Level 1";
+                turretRotationSpeedText.GetComponent<TextMeshProUGUI>().text = "    Level 1";
                 PlayerPrefs.SetFloat("TurretRotationSpeedValue",35f);
                 break;
             
             case 2 :
-                turretRotationSpeedText.GetComponent<TextMeshProUGUI>().text = "Level 2";
+                turretRotationSpeedText.GetComponent<TextMeshProUGUI>().text = "    Level 2";
                 PlayerPrefs.SetFloat("TurretRotationSpeedValue",55f);
                 break;
             
             case 3 :
-                turretRotationSpeedText.GetComponent<TextMeshProUGUI>().text = "Level 3";
+                turretRotationSpeedText.GetComponent<TextMeshProUGUI>().text = "    Level 3";
                 PlayerPrefs.SetFloat("TurretRotationSpeedValue",75f);
                 break;
         }
@@ -169,17 +174,17 @@ public class LoadData : MonoBehaviour
         switch (PlayerPrefs.GetInt("HealthIndex"))
         {
             case 1 :
-                healthText.GetComponent<TextMeshProUGUI>().text = "Level 1";
+                healthText.GetComponent<TextMeshProUGUI>().text = "    Level 1";
                 PlayerPrefs.SetFloat("HealthValue",100);
                 break;
             
             case 2 :
-                healthText.GetComponent<TextMeshProUGUI>().text = "Level 2";
+                healthText.GetComponent<TextMeshProUGUI>().text = "    Level 2";
                 PlayerPrefs.SetFloat("HealthValue",120);
                 break;
             
             case 3 :
-                healthText.GetComponent<TextMeshProUGUI>().text = "Level 3";
+                healthText.GetComponent<TextMeshProUGUI>().text = "    Level 3";
                 PlayerPrefs.SetFloat("HealthValue",150);
                 break;
         }
@@ -196,17 +201,17 @@ public class LoadData : MonoBehaviour
         switch (PlayerPrefs.GetInt("ReloadSpeedIndex"))
         {
             case 1 :
-                reloadSpeedText.GetComponent<TextMeshProUGUI>().text = "Level 1";
+                reloadSpeedText.GetComponent<TextMeshProUGUI>().text = "       Level 1";
                 PlayerPrefs.SetFloat("ReloadSpeedValue",3.5f);
                 break;
             
             case 2 :
-                reloadSpeedText.GetComponent<TextMeshProUGUI>().text = "Level 2";
+                reloadSpeedText.GetComponent<TextMeshProUGUI>().text = "       Level 2";
                 PlayerPrefs.SetFloat("ReloadSpeedValue",2.2f);
                 break;
             
             case 3 :
-                reloadSpeedText.GetComponent<TextMeshProUGUI>().text = "Level 3";
+                reloadSpeedText.GetComponent<TextMeshProUGUI>().text = "       Level 3";
                 PlayerPrefs.SetFloat("ReloadSpeedValue",1.5f);
                 break;
         }

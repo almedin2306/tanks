@@ -8,7 +8,7 @@ public class UpgradeTurretRotation : MonoBehaviour
     private int fromLevel2ToLevel3 = 300;
     
 
-    private LoadData lD;
+    [SerializeField]  private LoadData lD;
 
     private int currentUpgradeIndex;
     private int coinAmount;
@@ -32,6 +32,12 @@ public class UpgradeTurretRotation : MonoBehaviour
         
     }
 
+    void Update()
+    {
+        currentUpgradeIndex = PlayerPrefs.GetInt("TurretRotationSpeedIndex");
+        coinAmount = PlayerPrefs.GetInt("CoinAmount");
+    }
+
     
 
 
@@ -49,9 +55,9 @@ public class UpgradeTurretRotation : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("CoinAmount", PlayerPrefs.GetInt("CoinAmount") - fromLevel1ToLevel2);
                     PlayerPrefs.SetInt("TurretRotationSpeedIndex", 2);
-                    OpenNotificationWindow("Turret rotation speed successfully upgraded from level 1 to level 2");
                     lD.LoadTurretRotationSpeed();
                     lD.LoadCoinAmount();
+                    OpenNotificationWindow("Turret rotation speed successfully upgraded from level 1 to level 2");
                 }
                 else
                 {

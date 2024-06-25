@@ -9,4 +9,10 @@ public class SceneLoad : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void QuitGame()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
+    }
 }

@@ -8,7 +8,7 @@ public class UpgradeHealth : MonoBehaviour
     private int fromLevel2ToLevel3 = 300;
     
 
-    private LoadData lD;
+    [SerializeField] private LoadData lD;
 
     private int currentUpgradeIndex;
     private int coinAmount;
@@ -32,6 +32,13 @@ public class UpgradeHealth : MonoBehaviour
         
     }
 
+    void Update()
+    {
+        currentUpgradeIndex = PlayerPrefs.GetInt("HealthIndex");
+        coinAmount = PlayerPrefs.GetInt("CoinAmount");
+
+    }
+
     
 
 
@@ -49,9 +56,9 @@ public class UpgradeHealth : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("CoinAmount", PlayerPrefs.GetInt("CoinAmount") - fromLevel1ToLevel2);
                     PlayerPrefs.SetInt("HealthIndex", 2);
-                    OpenNotificationWindow("Health successfully upgraded from level 1 to level 2");
                     lD.LoadHealth();
                     lD.LoadCoinAmount();
+                    OpenNotificationWindow("Health successfully upgraded from level 1 to level 2");
                 }
                 else
                 {

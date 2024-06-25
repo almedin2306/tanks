@@ -8,7 +8,7 @@ public class UpgradeRotationSpeed : MonoBehaviour
     private int fromLevel2ToLevel3 = 300;
     
 
-    private LoadData lD;
+    [SerializeField] private LoadData lD;
 
     private int currentUpgradeIndex;
     private int coinAmount;
@@ -31,6 +31,13 @@ public class UpgradeRotationSpeed : MonoBehaviour
         
         
     }
+
+    void Update()
+    {
+        currentUpgradeIndex = PlayerPrefs.GetInt("RotationSpeedIndex");
+        coinAmount = PlayerPrefs.GetInt("CoinAmount");
+    }
+        
 
     
 
@@ -66,9 +73,9 @@ public class UpgradeRotationSpeed : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("CoinAmount", PlayerPrefs.GetInt("CoinAmount") - fromLevel2ToLevel3);
                     PlayerPrefs.SetInt("RotationSpeedIndex", 3);
-                    OpenNotificationWindow("Rotation speed successfully upgraded from level 2 to level 3");
                     lD.LoadRotationSpeed();
                     lD.LoadCoinAmount();
+                    OpenNotificationWindow("Rotation speed successfully upgraded from level 2 to level 3");
                 }
                 else
                 {

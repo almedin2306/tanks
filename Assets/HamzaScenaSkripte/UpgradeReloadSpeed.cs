@@ -8,7 +8,7 @@ public class UpgradeReloadSpeed : MonoBehaviour
     private int fromLevel2ToLevel3 = 300;
     
 
-    private LoadData lD;
+    [SerializeField] private LoadData lD;
 
     private int currentUpgradeIndex;
     private int coinAmount;
@@ -32,8 +32,11 @@ public class UpgradeReloadSpeed : MonoBehaviour
         
     }
 
-    
-
+    void Update()
+    {
+        currentUpgradeIndex = PlayerPrefs.GetInt("ReloadSpeedIndex");
+        coinAmount = PlayerPrefs.GetInt("CoinAmount");
+    }
 
     public void TryToUpgrade()
     {
@@ -49,9 +52,9 @@ public class UpgradeReloadSpeed : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("CoinAmount", PlayerPrefs.GetInt("CoinAmount") - fromLevel1ToLevel2);
                     PlayerPrefs.SetInt("ReloadSpeedIndex", 2);
-                    OpenNotificationWindow("Reload speed successfully upgraded from level 1 to level 2");
                     lD.LoadReloadSpeed();
                     lD.LoadCoinAmount();
+                    OpenNotificationWindow("Reload speed successfully upgraded from level 1 to level 2");
                 }
                 else
                 {
@@ -73,7 +76,7 @@ public class UpgradeReloadSpeed : MonoBehaviour
                 else
                 {
                     OpenNotificationWindow("You do not have enough money to upgrade reload speed from level 2 to level 3");
-                    
+                   
                 }
                 break;
             

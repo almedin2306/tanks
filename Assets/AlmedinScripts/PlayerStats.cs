@@ -73,4 +73,9 @@ public class PlayerStats : MonoBehaviour
     {
         PlayerHealth = PlayerPrefs.GetFloat("HealthValue");
     }
+
+    public float GetCurrentHealth()
+    {
+        return PlayerHealth;
+    }
 }

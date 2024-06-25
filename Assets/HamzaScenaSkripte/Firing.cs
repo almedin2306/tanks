@@ -9,7 +9,7 @@ public class Firing : MonoBehaviour
     public GameObject objectPrefab;
     public float cooldownDuration; // Vrijeme u sekundama između ispaljivanja
     private bool canFire = true; // Da li je trenutno moguće ispaljivanje
-    
+    public static bool isFired=false;
     public GameObject EffectPrefab;
     public AudioClip shotAudioClip;
 
@@ -55,7 +55,7 @@ public class Firing : MonoBehaviour
             effectRB.velocity = localXDirection * launchSpeed * 0.1f; // Adjust 0.1f for the desired speed
             
             AudioSource.PlayClipAtPoint(shotAudioClip, transform.position);
-
+            
             StartCoroutine(StartCooldown());
             StartCoroutine(DestroyObjectAfterDelay(newObject, 3.0f));
         }
@@ -70,10 +70,10 @@ public class Firing : MonoBehaviour
     IEnumerator StartCooldown()
     {
         canFire = false; // Postavite da ispaljivanje nije trenutno moguće
-
+        isFired = true;
         // Pričekajte cooldownDuration sekundi prije nego što ponovno omogućite ispaljivanje
         yield return new WaitForSeconds(cooldownDuration);
-
         canFire = true; // Omogućite ispaljivanje ponovo
+        isFired = false;
     }
 }

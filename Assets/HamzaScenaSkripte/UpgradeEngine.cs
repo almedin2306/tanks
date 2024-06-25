@@ -9,7 +9,7 @@ public class UpgradeEngine : MonoBehaviour
     private int fromLevel2ToLevel3 = 300;
     
 
-    private LoadData lD;
+    [SerializeField]  private LoadData lD;
 
     private int currentUpgradeIndex;
     private int coinAmount;
@@ -33,6 +33,12 @@ public class UpgradeEngine : MonoBehaviour
         
     }
 
+    void Update()
+    {
+        currentUpgradeIndex = PlayerPrefs.GetInt("EngineLevelIndex");
+        coinAmount = PlayerPrefs.GetInt("CoinAmount");
+    }
+
     
 
 
@@ -50,9 +56,9 @@ public class UpgradeEngine : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("CoinAmount", PlayerPrefs.GetInt("CoinAmount") - fromLevel1ToLevel2);
                     PlayerPrefs.SetInt("EngineLevelIndex", 2);
-                    OpenNotificationWindow("Engine successfully upgraded from level 1 to level 2");
                     lD.LoadEngineLevel();
                     lD.LoadCoinAmount();
+                    OpenNotificationWindow("Engine successfully upgraded from level 1 to level 2");
                 }
                 else
                 {
