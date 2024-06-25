@@ -19,6 +19,7 @@ public class Reload : MonoBehaviour
     {
         if (Firing.isFired == true)
         {
+            reloadBarImage.fillAmount = 0f;
             StartCoroutine(Reloadv2());
         }
     }
@@ -26,7 +27,7 @@ public class Reload : MonoBehaviour
     public IEnumerator Reloadv2()
     {
         float elapsedTime = 0f;
-        reloadBarImage.fillAmount = 0f;
+        
         while (elapsedTime < reloadTime)
         {
             // Calculate the fill amount
@@ -34,13 +35,14 @@ public class Reload : MonoBehaviour
             reloadBarImage.fillAmount = fillAmount;
 
             // Increment the elapsed time
-            elapsedTime += Time.deltaTime;
+            elapsedTime += Time.fixedDeltaTime;
 
             // Wait until the next frame
             yield return null;
         }
 
         // Ensure the fill amount is set to 1 (100%)
-        //reloadBarImage.fillAmount = 1f;
+        reloadBarImage.fillAmount = 1f;
+        Firing.isFired = false;
     }
 }

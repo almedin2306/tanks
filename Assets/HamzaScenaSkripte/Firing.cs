@@ -75,6 +75,6 @@ public class Firing : MonoBehaviour
         // Pričekajte cooldownDuration sekundi prije nego što ponovno omogućite ispaljivanje
         yield return new WaitForSeconds(cooldownDuration);
         canFire = true; // Omogućite ispaljivanje ponovo
-        isFired = false;
+        //isFired = false;
     }
 }
