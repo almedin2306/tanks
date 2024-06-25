@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
+
 using UnityEngine;
 
 public class LoadData : MonoBehaviour
@@ -16,12 +16,12 @@ public class LoadData : MonoBehaviour
     
     void Start()
     {
-        PlayerPrefs.SetInt("RotationSpeedIndex", 1);
+       /* PlayerPrefs.SetInt("RotationSpeedIndex", 1);
         PlayerPrefs.SetInt("EngineLevelIndex", 1);
         PlayerPrefs.SetInt("TurretRotationSpeedIndex", 1);
         PlayerPrefs.SetInt("HealthIndex", 0);
         PlayerPrefs.SetInt("ReloadSpeedIndex", 1);
-        PlayerPrefs.SetInt("CoinAmount", 2000); 
+        PlayerPrefs.SetInt("CoinAmount", 2000);  */
         LoadCoinAmount();
         LoadEngineLevel();
         LoadRotationSpeed();
