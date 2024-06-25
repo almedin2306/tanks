@@ -6401,6 +6401,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 393835237918781442, guid: c7c8b92964c2d28478f2671a00d6a5d7, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1386497873}
+    - target: {fileID: 393835237918781442, guid: c7c8b92964c2d28478f2671a00d6a5d7, type: 3}
       propertyPath: moveSpeed
       value: 3
       objectReference: {fileID: 0}
@@ -9574,6 +9578,11 @@ MonoBehaviour:
   respawnPoint: {fileID: 297007213}
   shootSound: {fileID: 0}
   muzzleFlash: {fileID: 0}
+--- !u!54 &1386497873 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 6779852424840487808, guid: c7c8b92964c2d28478f2671a00d6a5d7, type: 3}
+  m_PrefabInstance: {fileID: 944838900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1388195607 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000012968262300, guid: 30b99e7dc1382e346a7f9789de00de5e, type: 3}

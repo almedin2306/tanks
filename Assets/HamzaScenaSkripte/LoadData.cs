@@ -21,7 +21,7 @@ public class LoadData : MonoBehaviour
         PlayerPrefs.SetInt("TurretRotationSpeedIndex", 1);
         PlayerPrefs.SetInt("HealthIndex", 0);
         PlayerPrefs.SetInt("ReloadSpeedIndex", 1);
-        PlayerPrefs.SetInt("CoinAmount", 2000);
+        PlayerPrefs.SetInt("CoinAmount", 2000); 
         LoadCoinAmount();
         LoadEngineLevel();
         LoadRotationSpeed();

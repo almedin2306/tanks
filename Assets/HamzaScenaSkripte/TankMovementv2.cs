@@ -13,7 +13,7 @@ public class TankMovementv2 : MonoBehaviour
 
     public float wheelRotationSpeed = 150.0f;
 
-    private Rigidbody rb;
+    public Rigidbody rb;
     private float moveInput;
     private float rotationInput;
 
